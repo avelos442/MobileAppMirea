@@ -11,18 +11,20 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.work.OneTimeWorkRequest
+import androidx.work.WorkManager
 import ru.mirea.laptevavs.mireaproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var appBarConfiguration: AppBarConfiguration// конфигурация панели приложения
+    private lateinit var binding: ActivityMainBinding // переменная для связи макета и кода активности
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //связывание разметки и кода
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding.root) //макет
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
@@ -37,11 +39,14 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_brouser
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.webViewFragment
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val workRequest = OneTimeWorkRequest.Builder(Worker::class.java).build()
+        WorkManager.getInstance(this).enqueue(workRequest)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -54,4 +59,5 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
 }
