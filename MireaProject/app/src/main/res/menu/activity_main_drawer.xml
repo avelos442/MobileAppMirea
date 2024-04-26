@@ -24,5 +24,17 @@
             android:id="@+id/dataFragment"
             android:icon="@drawable/ic_launcher_foreground"
             android:title="Data Fragment" />
+        <item
+            android:id="@+id/sensorEventFragment"
+            android:icon="@android:drawable/dark_header"
+            android:title="Sensor Event" />
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/camera" />
+        <item
+            android:id="@+id/nav_mic"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="@string/mic" />
     </group>
 </menu>

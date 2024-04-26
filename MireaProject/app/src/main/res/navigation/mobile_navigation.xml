@@ -33,5 +33,18 @@
         android:name="ru.mirea.laptevavs.mireaproject.DataFragment"
         android:label="Data Fragment"
         tools:layout="@layout/fragment_data" />
+    <fragment
+        android:id="@+id/sensorEventFragment"
+        android:name="ru.mirea.laptevavs.mireaproject.SensorEventFragment"
+        android:label="fragment_event_sensor"
+        tools:layout="@layout/fragment_sensor_event" />
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="ru.mirea.laptevavs.mireaproject.CameraFragment"
+        android:label="CameraFragment" />
+    <fragment
+        android:id="@+id/nav_mic"
+        android:name="ru.mirea.laptevavs.mireaproject.MicrophoneFragment"
+        android:label="MicrophoneFragment" />
 
 </navigation>
