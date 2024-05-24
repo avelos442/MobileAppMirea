@@ -36,5 +36,22 @@
             android:id="@+id/nav_mic"
             android:icon="@drawable/ic_launcher_foreground"
             android:title="@string/mic" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_files"
+            android:icon="@drawable/common_google_signin_btn_icon_light"
+            android:title="Files Fragment" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/common_google_signin_btn_icon_light"
+            android:title="Info Fragment" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/common_google_signin_btn_icon_light"
+            android:title="Map Fragment" />
+
     </group>
 </menu>

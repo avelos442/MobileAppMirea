@@ -46,5 +46,26 @@
         android:id="@+id/nav_mic"
         android:name="ru.mirea.laptevavs.mireaproject.MicrophoneFragment"
         android:label="MicrophoneFragment" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ru.mirea.laptevavs.mireaproject.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_files"
+        android:name="ru.mirea.laptevavs.mireaproject.FilesFragment"
+        android:label="FileFragment"
+        tools:layout="@layout/fragment_files" />
+    <fragment
+        android:id="@+id/nav_info"
+        android:name="ru.mirea.laptevavs.mireaproject.InfoFragment"
+        android:label="InfoFragment"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="ru.mirea.laptevavs.mireaproject.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_info" />
 
 </navigation>

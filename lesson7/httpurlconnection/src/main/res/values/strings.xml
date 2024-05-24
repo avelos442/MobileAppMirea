@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HttpURLConnection</string>
+    <string name="location_info">
+        IP: %s\n
+        City: %s\n
+        Region: %s\n
+        Country: %s\n
+        Loc: %s\nOrg: %s\n
+        Postal: %s\n
+        Timezone: %s</string>
+    <string name="weather_info">Weather: %s, Temperature: %d°C</string>
+</resources>
